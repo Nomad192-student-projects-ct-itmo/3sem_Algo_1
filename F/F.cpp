@@ -1,20 +1,11 @@
 #include <cstdio>
-#include <cassert>
 #include <iostream>
-#include <map>
 #include <set>
 #include <vector>
 #include <utility>
 
 size_t n, m;
 using namespace std;
-
-struct directed_edge_t
-{
-    size_t from, to;
-};
-
-//directed_edge_t edges[100000];
 
 set<pair<size_t, size_t>> edges;
 
@@ -23,7 +14,7 @@ struct directed_vertex_t
 	multiset<size_t> in;
 	multiset<size_t> out; 
 
-	size_t strongly_connected_component;
+	size_t strongly_connected_component{};
 };
 
 directed_vertex_t vertexes[10000];
@@ -102,11 +93,7 @@ int main()
 
 	Kosaraju_and_Sharir_algorithm();
 
-    // for(auto& item : top_list_g)
-    //     cout << item << " "; 
-    // cout << endl;
 
-	size_t k = 0;
 	std::set<std::pair<int, int>> answer;
 	for(auto& edge : edges)
 	{
