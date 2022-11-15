@@ -1,0 +1,10 @@
+*
+!*.git*
+
+!/*/
+
+!*.c
+!*.h
+!*.cpp
+!*.hpp
+!CMakeLists.txt
